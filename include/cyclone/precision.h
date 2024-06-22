@@ -11,5 +11,7 @@ namespace cyclone {
 	 */
 
 	typedef float real; // defines the type real as a float
+	
+	#define real_sqrt sqrtf; // defines the precision of the square root operator
 
 }

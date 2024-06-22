@@ -37,6 +37,43 @@ namespace cyclone {
 				y = -y;
 				z = -z;
 			}
+
+			
+			/* Gets the magnitude of this vector. */
+			real magnitude() const
+			{
+				return real_sqrt(x*x+y*y+z*z);
+			}
+
+			/* Gets the squared magnitude of this vector. */
+			real squareMagnitude() const
+			{
+				return x*x+y*y+z*z;
+			}
+
+			/* Turns a non-zero vector into a vector of unit length. */
+			void normalize()
+			{
+				real l = magnitude();
+				if (l > 0)
+				{
+					(*this)*=((real)1)/l;
+				}
+			}
+
+			/* Multiplies this vector by the given scalar. */
+			void operator*=(const real value)
+			{
+				x *= value;
+				y *= value;
+				z *= value;
+			}
+
+			/* Returns a copy of this vector scaled to the given value. */
+			Vector3 operator*(const real value) const
+			{
+				return Vector3(x*value, y*value, z*value);
+			}
 			
 
 	};

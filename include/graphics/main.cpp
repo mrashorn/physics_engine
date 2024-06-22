@@ -15,7 +15,7 @@ int main()
 
 
 
-	sf::CircleShape my_circle(50.f, 40); // radius, number of points or sides = quality
+	sf::CircleShape my_circle(10.f, 40); // radius, number of points or sides = quality
 	my_circle.setFillColor(sf::Color(100,250,50));
 	my_circle.setPosition((resolution.x/2) - my_circle.getRadius(), 
 			(resolution.y/2) - my_circle.getRadius());
