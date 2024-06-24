@@ -74,7 +74,42 @@ namespace cyclone {
 			{
 				return Vector3(x*value, y*value, z*value);
 			}
+
+			/* Adds the given vector to this. */
+			void operator+=(const Vector3& v)
+			{
+				x += v.x;
+				y += v.y;
+				z += v.z;
+			}
+
+			/* Returns the value of the given vector added to this. */
+			Vector3 operator+(const Vector3& v) const
+			{
+				return Vector3(x+v.x, y+v.y, z+v.z);
+			}
 			
+			/* Subtracs the given vector to this. */
+			void operator-=(const Vector3& v)
+			{
+				x -= v.x;
+				y -= v.y;
+				z -= v.z;
+			}
+
+			/* Returns the value of the given vector subtracted from this. */
+			Vector3 operator-(const Vector3& v) const
+			{
+				return Vector3(x-v.x, y-v.y, z-v.z);
+			}
+
+			/* Adds the given vector to this, scaled by the given amount. */
+			void addScaledVector(const Vector3& vector, real scale)
+			{
+				x += vector.x * scale;
+				y += vector.y * scale;
+				z += vector.z * scale;
+			}
 
 	};
 
